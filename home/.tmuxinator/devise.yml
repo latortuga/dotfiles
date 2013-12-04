@@ -1,0 +1,5 @@
+project_name: devise
+project_root: ~/projects/github/devise
+tabs:
+  - vim: vim -c ":OpenSession devise"
+  - git: git st

@@ -1,0 +1,47 @@
+[user]
+	name = Drew Ulmer
+	email = drew.ulmer@gmail.com
+[core]
+	excludesfile = ~/.cvsignore
+[color]
+	ui = true
+[color "branch"]
+  current = yellow reverse
+  local = yellow
+  remote = green
+[color "diff"]
+  meta = yellow bold
+  frag = magenta bold
+  old = red bold
+  new = green bold
+[color "status"]
+  added = green
+  changed = yellow
+  untracked = magenta
+[alias]
+  ci = commit
+	co = checkout
+	st = status -sb
+	br = branch
+  nb = checkout -b
+	who = shortlog -s -n --
+  diffs = diff --staged
+  diffw = diff --word-diff
+  lg = log --graph --pretty=format:'%Cred%h%Creset %C(bold blue)<%an>%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)' --abbrev-commit --date=relative
+[gui]
+	fontui = -family helvetica -size 10 -weight bold -slant roman -underline 0 -overstrike 0
+	diffopts = --patience
+[giggle]
+	main-window-maximized = true
+	main-window-geometry = 0x0+0+0
+	history-view-vpane-position = 587
+	file-view-vpane-position = 761
+	main-window-view = HistoryView
+[push]
+    # from the git docs:
+    # upstream - push the current branch to its upstream branch. With this, git
+    # push will update the same remote ref as the one which is merged by git
+    # pull, making push and pull symmetrical.
+    default = upstream
+[merge]
+  conflictstyle = diff3

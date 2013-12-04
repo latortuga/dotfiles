@@ -1,0 +1,15 @@
+#set editing-mode vi
+tab: complete
+set completion-ignore-case on
+set blink-matching-paren on
+
+#set keymap vi-insert
+
+$if Bash
+"\C-l": "\e\C-la"
+$endif
+
+# Bind the up arrow to history search, instead of history step
+"\e[A": history-search-backward
+"\e[B": history-search-forward
+
