@@ -255,7 +255,10 @@ nmap <leader>2 :execute "!zeus test " . bufname("%") . ":" . line(".")<CR>
 " Old Vimux integration commands, not used atm
 "nmap <leader>3 :call VimuxRunCommand("clear; zeus test " . bufname("%"))<CR>
 "nmap <leader>4 :call VimuxRunCommand("clear; zeus test " . bufname("%") . ":" . line("."))<CR>
-nmap <leader>3 :execute "!sh .project.sh"<CR>
+
+" Run a custom sh file so a custom test runner can be invoked if desired. Pass
+" in buffer name and line number for ease of configuration.
+nmap <leader>3 :execute "!sh .project.sh " . bufname("%") . " " . line(".")<CR>
 
 
 """"""""""""""
